@@ -24,5 +24,5 @@ diff:
     kind: CustomResourceDefinition
     name: bgppeers.metallb.io
     operations:
-    - { "op": "remove", "path": "/spec/conversion" }
+    - { "op": "remove", "path": "/spec" }
     - { "op": "remove", "path": "/status" }
