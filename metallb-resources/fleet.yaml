@@ -1,0 +1,15 @@
+defaultNamespace: metallb-system
+
+labels:
+  app: edge-metallb-resources
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: edge-metallb
+
+helm:
+  takeOwnership: true
+
+kustomize:
+  dir: ./resources

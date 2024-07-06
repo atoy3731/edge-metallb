@@ -1,0 +1,17 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: edge-metallb
+  namespace: fleet-default
+spec:
+  repo: git@github.com:atoy3731/edge-metallb.git
+  branch: main
+  clientSecretName: private-key
+  targets:
+  - name: inference
+    clusterSelector:
+      matchLabels:
+        inference: enabled
+  paths:
+  - "./metallb"
+  - "./metallb-resources"
