@@ -8,11 +8,6 @@ helm:
   chart: metallb
   version: 0.14.5
   releaseName: metallb
-  # valuesFiles:
-  #   - values.yaml
-
-dependsOn:
-- name: common-namespaces-helm
 
 diff:
   comparePatches:
