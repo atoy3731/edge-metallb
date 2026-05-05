@@ -25,3 +25,8 @@ diff:
     operations:
     - { "op": "remove", "path": "/spec/conversion" }
     - { "op": "remove", "path": "/status" }
+  - apiVersion: admissionregistration.k8s.io/v1
+    kind: ValidatingWebhookConfiguration
+    name: metallb-webhook-configuration
+    operations:
+    - {"op": "remove", "path": "/webhooks"}
